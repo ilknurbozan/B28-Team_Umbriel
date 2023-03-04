@@ -2,40 +2,35 @@ package com.BlueCRM.step_definitions;
 
 import com.BlueCRM.pages.LoginPage;
 import com.BlueCRM.utilities.ConfigurationReader;
-import io.cucumber.java.en.Given;
+import com.BlueCRM.utilities.Driver;
+import io.cucumber.java.en.Then;
+import io.cucumber.java.en.When;
+import org.junit.Assert;
+
 public class LoginStepDefs {
+    LoginPage login=new LoginPage();
 
+    @When("user use username {string} and passcode {string}")
+    public void user_use_username_and_passcode(String string, String string2) {
+    login.username.sendKeys(ConfigurationReader.getProperty("HR_username"));
+    login.password.sendKeys(ConfigurationReader.getProperty("HR_password"));
 
-    @Given("the user is on the login page")
-    public void the_user_is_on_the_login_page() {
-        System.out.println("Login to app in Before method");
+    }
+    @When("user click the login button")
+    public void user_click_the_login_button() {
+        login.login.click();
+
+    }
+    @Then("verify the user should be at the home page")
+    public void verify_the_user_should_be_at_the_home_page() {
+      String expectedUrl="Portal";
+      String actualUrl= Driver.getDriver().getTitle();
+        Assert.assertTrue(actualUrl.contains(expectedUrl));
+
     }
 
-    @Given("the user logged in as {string}")
-    public void the_user_logged_in_as(String userType) {
-        //based on input enter that user information
-        String username =null;
-        String password =null;
 
-        if(userType.equalsIgnoreCase("driver")){
-            username = ConfigurationReader.getProperty("driver_username");
-            password = ConfigurationReader.getProperty("driver_password");
-        }else if(userType.equalsIgnoreCase("sales manager")){
-            username = ConfigurationReader.getProperty("sales_manager_username");
-            password = ConfigurationReader.getProperty("sales_manager_password");
-        }else if(userType.equalsIgnoreCase("store manager")){
-            username = ConfigurationReader.getProperty("store_manager_username");
-            password = ConfigurationReader.getProperty("store_manager_password");
-        }
-        //send username and password and login
-        new LoginPage().login(username,password);
-    }
 
-    @Given("the user logged in with username as {string} and password as {string}")
-    public void the_user_logged_in_with_username_as_and_password_as(String username, String password) {
-      LoginPage loginPage=new LoginPage();
-      loginPage.login(username,password);
-    }
 
 
 

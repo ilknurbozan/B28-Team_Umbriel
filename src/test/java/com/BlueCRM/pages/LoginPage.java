@@ -1,7 +1,8 @@
 package com.BlueCRM.pages;
 
 
-import com.fleet.utilities.Driver;
+import com.BlueCRM.utilities.Driver;
+//import com.fleet.utilities.Driver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -12,23 +13,23 @@ public class LoginPage {
         PageFactory.initElements(Driver.getDriver(), this);
     }
 
-    @FindBy(id="prependedInput")
-    public WebElement userName;
+    @FindBy(name="USER_LOGIN")
+    public WebElement username;
 
 
-
-    @FindBy(id="prependedInput2")
+    @FindBy(name="USER_PASSWORD")
     public WebElement password;
 
-    @FindBy(name = "_submit")
-    public WebElement submit;
+    @FindBy(className = "login-btn")
+    public WebElement login;
 
 
-    public void login(String userNameStr, String passwordStr) {
-        userName.sendKeys(userNameStr);
+
+   /* public void login(String userNameStr, String passwordStr) {
+        username.sendKeys(userNameStr);
         password.sendKeys(passwordStr);
-        submit.click();
+        login.click();
         // verification that we logged
-    }
+    }*/
 
 }
