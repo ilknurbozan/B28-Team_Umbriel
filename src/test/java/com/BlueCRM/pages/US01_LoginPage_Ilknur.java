@@ -7,9 +7,9 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class LoginPage {
+public class US01_LoginPage_Ilknur {
 
-    public LoginPage(){
+    public US01_LoginPage_Ilknur(){
         PageFactory.initElements(Driver.getDriver(), this);
     }
 
