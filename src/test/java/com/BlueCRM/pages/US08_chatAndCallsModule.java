@@ -13,5 +13,16 @@ public class US08_chatAndCallsModule {
     @FindBy(xpath = "//span[normalize-space()='Chat and Calls']")
     public WebElement chatAncCallsButton;
 
+    @FindBy(xpath = "//div[@class='bx-desktop-tab-icon bx-desktop-tab-icon-im']")
+    public WebElement messageButton;
+
+    @FindBy(xpath = "//div[@class='bx-desktop-tab-icon bx-desktop-tab-icon-notify']")
+    public WebElement notificationButton;
+
+    @FindBy(xpath = "//div[@class='bx-desktop-tab-icon bx-desktop-tab-icon-config']")
+    public WebElement settingsButton;
+
+    @FindBy(xpath = "//div[@class='bx-desktop-tab-icon bx-desktop-tab-icon-im-lf']")
+    public WebElement activeStreamButton;
 
 }
