@@ -27,12 +27,13 @@ public class US01_LoginPage_Ilknur {
 
    public void login(String userNameStr, String passwordStr) {
 
-       Driver.getDriver().get(ConfigurationReader.getProperty("url"));
+      
        username.sendKeys(userNameStr);
        password.sendKeys(passwordStr);
        login.click();
 
     }
+
 
 
 }
