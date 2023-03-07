@@ -5,9 +5,9 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class US08_chatAndCallsModule {
+public class US08_chatAndCallsModule_ANIL {
 
-    public US08_chatAndCallsModule(){
+    public US08_chatAndCallsModule_ANIL(){
         PageFactory.initElements(Driver.getDriver(),this);
     }
 

@@ -1,7 +1,7 @@
 package com.BlueCRM.step_definitions;
 
 import com.BlueCRM.pages.US01_LoginPage_Ilknur;
-import com.BlueCRM.pages.US08_chatAndCallsModule;
+import com.BlueCRM.pages.US08_chatAndCallsModule_ANIL;
 import com.BlueCRM.utilities.ConfigurationReader;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -10,7 +10,7 @@ import io.cucumber.java.en.When;
 import java.util.List;
 
 public class US08_accessTheChatAndCallsModule {
-   US08_chatAndCallsModule us08_chatAndCallsModule = new US08_chatAndCallsModule();
+   US08_chatAndCallsModule_ANIL us08_chatAndCallsModule = new US08_chatAndCallsModule_ANIL();
     US01_LoginPage_Ilknur login=new US01_LoginPage_Ilknur();
 
     @Given("users are on the homepage")
