@@ -3,6 +3,7 @@ package com.BlueCRM.step_definitions;
 import com.BlueCRM.pages.US01_LoginPage_Ilknur;
 import com.BlueCRM.pages.US08_chatAndCallsModule;
 import com.BlueCRM.utilities.ConfigurationReader;
+import com.BlueCRM.utilities.Driver;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -29,6 +30,7 @@ public class US08_accessTheChatAndCallsModule {
 
     @Then("the user see the below options:")
     public void the_user_see_the_below_options(io.cucumber.datatable.DataTable dataTable) {
+            String currentWindowHandle = Driver.getDriver().getWindowHandle();
 
     }
 
