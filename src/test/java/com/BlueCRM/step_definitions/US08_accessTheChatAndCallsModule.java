@@ -45,16 +45,20 @@ public class US08_accessTheChatAndCallsModule {
             System.out.println("each.getAccessibleName() = " + each.getAccessibleName());
             actualString.add(each.getAccessibleName());
         }
-        Assert.assertEquals(list.get(0),actualString.get(0));
+
+
+
+
+          Assert.assertEquals(list,actualString);
+
+         /*
+          Assert.assertEquals(list.get(0),actualString.get(0));
         Assert.assertEquals(list.get(1),actualString.get(1));
         Assert.assertEquals(list.get(2),actualString.get(2));
         Assert.assertEquals(list.get(3),actualString.get(3));
 
 
 
-         // Assert.assertEquals(list,actualString);
-
-         /*
         String expectedMessage = "Message ";
         Assert.assertEquals(actualList.get(0).getAccessibleName(),expectedMessage);
         String expected = "Notifications";
