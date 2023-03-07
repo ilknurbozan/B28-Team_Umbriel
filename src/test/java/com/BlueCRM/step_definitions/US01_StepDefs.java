@@ -3,13 +3,11 @@ package com.BlueCRM.step_definitions;
 import com.BlueCRM.pages.US01_LoginPage_Ilknur;
 import com.BlueCRM.utilities.ConfigurationReader;
 import com.BlueCRM.utilities.Driver;
-import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
 
 public class US01_StepDefs {
-
     US01_LoginPage_Ilknur login=new US01_LoginPage_Ilknur();
 
     @When("user use username {string} and passcode {string}")
@@ -30,6 +28,11 @@ public class US01_StepDefs {
         Assert.assertTrue(actualUrl.contains(expectedUrl));
 
     }
+
+
+
+
+
 
 
 
