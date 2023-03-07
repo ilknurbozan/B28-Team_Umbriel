@@ -25,11 +25,11 @@ public class US01_LoginPage_Ilknur {
 
 
 
-   /* public void login(String userNameStr, String passwordStr) {
-        username.sendKeys(userNameStr);
-        password.sendKeys(passwordStr);
-        login.click();
-        // verification that we logged
-    }*/
+   public void login(String userNameStr, String passwordStr) {
+       username.sendKeys(userNameStr);
+       password.sendKeys(passwordStr);
+       login.click();
+       // verification that we logged
 
+   }
 }
