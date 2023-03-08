@@ -57,16 +57,24 @@ public class US14_AccessTheCompanyPage_Mehmet {
 
         List<String> actualModules = new ArrayList<>();
 
+
         for (WebElement each : companyPage.modules) {
             if (!(each.getText().contains("More"))){
 
                 actualModules.add(each.getText());
 
+
             }
 
         }
 
-        System.out.println("actualModules = " + actualModules);
+        Assert.assertEquals(expectedModules,actualModules);
+
+        // Ask Alvin on tomorrow's daily stand-up meeting
+        //1# How to make browser page smaller, it doesn't see the 7th module on given page
+        //2# Empty space on the Assertion is it bug? What to do ?
+
+
 
 
     }
