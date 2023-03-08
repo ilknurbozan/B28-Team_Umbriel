@@ -485,4 +485,11 @@ public class BrowserUtils {
     }
 
 
+
+    public void makePageSmaller(){
+        JavascriptExecutor js = (JavascriptExecutor) Driver.getDriver();
+        js.executeScript("document.body.style.zoom='80%'");
+    }
+
+
 }
