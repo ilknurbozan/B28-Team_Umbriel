@@ -22,21 +22,6 @@ public class US14_AccessTheCompanyPage_Mehmet {
     com.BlueCRM.pages.US14_AccessTheCompanyPage_Mehmet companyPage = new com.BlueCRM.pages.US14_AccessTheCompanyPage_Mehmet();
 
 
-
-
-  /*  @Given("user is already on homepage")
-    public void user_is_already_on_homepage() {
-
-        loginMethod.login(ConfigurationReader.getProperty("HR_username"), ConfigurationReader.getProperty("HR_password"));
-
-    }
-
-   */
-
-
-
-
-
     @Given("user clicks the Company page")
     public void user_clicks_the_company_page() {
 
