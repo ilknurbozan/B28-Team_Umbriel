@@ -30,6 +30,16 @@ public class US01_StepDefs {
     }
 
 
+    @When("user use invalid username {string} and passcode {string}")
+    public void user_use_invalid_username_and_passcode(String string, String string2) {
+       login.login("invalid_username","invalid_password");
+    }
+    @Then("verify {string} should be displayed")
+    public void verify_should_be_displayed(String string) {
+      login.invalidMsg.isDisplayed();
+    }
+
+
 
 
 

@@ -7,6 +7,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+import java.util.List;
+
 public class US03_Logout_function_Mehmet {
 
     public US03_Logout_function_Mehmet(){
@@ -19,6 +21,11 @@ public class US03_Logout_function_Mehmet {
 
     @FindBy(xpath = "//span[text()='Log out']")
     public WebElement logoutButton;
+
+
+
+
+
 
 
 

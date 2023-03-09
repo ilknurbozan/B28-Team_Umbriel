@@ -43,7 +43,7 @@ public class US06_Options_Under_Profile_StepDefs {
        // System.out.println("profileMethod.myProfile.getText() = " + profileMethod.myProfile.getAccessibleName());
         for (WebElement actualValue : actualValues) {
             actualValuesString.add(actualValue.getText());
-            //System.out.println(actualValue.getAccessibleName());
+            //System.out.println(actualValue.getAccessibleName());deneme
         }
 
         Assert.assertEquals(expectedValues, actualValuesString);

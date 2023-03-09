@@ -45,5 +45,6 @@ public class US03_Logout_function_StepDefs {
 
         Assert.assertTrue(actualTitle.equals(expectedTitle));
 
+
     }
 }
