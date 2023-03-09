@@ -21,24 +21,23 @@ public class US09_accessMyProfile_StepDefs {
     public void user_is_already_on_the_home_page() {
         loginMethod.login(ConfigurationReader.getProperty("HR_username"), ConfigurationReader.getProperty("HR_password"));
     }
+
     @Then("user clicks to username block")
     public void user_clicks_to_user_block() {
         accessMyProfile.userNameBlock.click();
     }
+
     @Then("user clicks to my profile section")
     public void user_clicks_to_my_profile_section() {
         accessMyProfile.myProfile.click();
-        //BrowserUtils.sleep(1);
     }
+
     @Then("user should see five options are displayed")
     public void user_should_see_five_options_are_displayed(List<String> expectedList) {
         List<String> actualList = new ArrayList<>();
-        for (WebElement each: accessMyProfile.myProfileMenu) {
-           actualList.add(each.getText());
+        for (WebElement each : accessMyProfile.myProfileMenu) {
+            actualList.add(each.getText());
         }
-
-        Assert.assertEquals(expectedList,actualList);
-
+        Assert.assertEquals(expectedList, actualList);
     }
-
 }
