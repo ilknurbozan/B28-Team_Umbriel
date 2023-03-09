@@ -15,7 +15,7 @@ import org.junit.runner.RunWith;
         glue = "com/BlueCRM/step_definitions",
         dryRun = false,
 
-        tags = "@kwesi",
+        tags = "@wip",
 
         publish = true //generating a report with public link
 )
