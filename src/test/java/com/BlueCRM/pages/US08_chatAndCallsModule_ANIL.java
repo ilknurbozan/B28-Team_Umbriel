@@ -7,14 +7,14 @@ import org.openqa.selenium.support.PageFactory;
 
 import java.util.List;
 
-public class US08_chatAndCallsModule_ANIL {
+public class US08_chatAndCallsModule_ANIL   {
 
     public US08_chatAndCallsModule_ANIL(){
         PageFactory.initElements(Driver.getDriver(),this);
     }
 
 
-    @FindBy(xpath = "//div[@class='bx-desktop-appearance-tab']")
+    @FindBy(xpath = "//div[@class='bx-desktop-appearance-tab']//span/..")
     public List<WebElement> table;
     @FindBy(xpath = "//span[normalize-space()='Chat and Calls']")
     public WebElement chatAncCallsButton;
@@ -33,5 +33,7 @@ public class US08_chatAndCallsModule_ANIL {
 
     @FindBy(xpath = "//div[@title='Activity Stream ']")
     public WebElement activeStreamButton;
+
+
 
 }
