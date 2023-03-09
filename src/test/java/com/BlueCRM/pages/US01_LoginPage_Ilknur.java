@@ -23,6 +23,9 @@ public class US01_LoginPage_Ilknur {
     @FindBy(className = "login-btn")
     public WebElement login;
 
+    @FindBy(className = "errortext")
+    public WebElement invalidMsg;
+
 
 
    public void login(String userNameStr, String passwordStr) {
