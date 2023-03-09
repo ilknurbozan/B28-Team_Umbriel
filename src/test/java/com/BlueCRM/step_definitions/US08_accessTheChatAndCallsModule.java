@@ -37,13 +37,11 @@ public class US08_accessTheChatAndCallsModule {
 
         List<WebElement> actualList = new ArrayList<>();
         List<String> actualString = new ArrayList<String>();
-
-        actualList.addAll(Arrays.asList(us08_chatAndCallsModule.messageButton, us08_chatAndCallsModule.activeStreamButton,
-                us08_chatAndCallsModule.settingsButton, us08_chatAndCallsModule.notificationButton));
+        actualList.addAll(us08_chatAndCallsModule.table);
 
           for (WebElement each : actualList) {
-            System.out.println("each.getAccessibleName() = " + each.getAccessibleName());
-            actualString.add(each.getAccessibleName());
+              System.out.println("each.getAccessibleName() = " + each.getAccessibleName());
+              actualString.add(each.getAccessibleName());
         }
 
 
