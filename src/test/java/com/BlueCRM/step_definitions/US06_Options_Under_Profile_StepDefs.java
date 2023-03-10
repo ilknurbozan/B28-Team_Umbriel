@@ -20,8 +20,8 @@ public class US06_Options_Under_Profile_StepDefs {
     US06_Options_Under_Profile profileMethod = new US06_Options_Under_Profile();
 
 
-    @Given("users are on th homepage")
-    public void users_are_on_th_homepage() {
+    @Given("users are already on the homepage")
+    public void users_are_on_the_homepage() {
         home.login(ConfigurationReader.getProperty("HR_username"), ConfigurationReader.getProperty("HR_password"));
 
     }
@@ -35,7 +35,7 @@ public class US06_Options_Under_Profile_StepDefs {
     @Then("verify the users see flowing five options:")
     public void verifyTheUsersSeeFlowingFiveOptions(List<String> expectedValues) {
 
-        List<WebElement> actualValues = new ArrayList<>();
+       /* List<WebElement> actualValues = new ArrayList<>();
         actualValues.addAll(Arrays.asList(profileMethod.myProfile, profileMethod.editProfile, profileMethod.themes, profileMethod.configureNotifications, profileMethod.logout));
 
         List<String> actualValuesString = new ArrayList<>();
@@ -44,6 +44,12 @@ public class US06_Options_Under_Profile_StepDefs {
         for (WebElement actualValue : actualValues) {
             actualValuesString.add(actualValue.getText());
             //System.out.println(actualValue.getAccessibleName());deneme
+        }*/
+
+        List<String> actualValuesString = new ArrayList<>();
+
+        for(WebElement actualValue:profileMethod.profileMenu){
+            actualValuesString.add(actualValue.getText());
         }
 
         Assert.assertEquals(expectedValues, actualValuesString);
