@@ -40,7 +40,6 @@ public class US08_accessTheChatAndCallsModule {
         actualList.addAll(us08_chatAndCallsModule.table);
 
           for (WebElement each : actualList) {
-              System.out.println("each.getAccessibleName() = " + each.getText());
               actualString.add(each.getAccessibleName());
         }
 
