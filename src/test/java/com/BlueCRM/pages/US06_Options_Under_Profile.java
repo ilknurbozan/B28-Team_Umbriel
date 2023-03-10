@@ -5,6 +5,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+import java.util.List;
+
 public class US06_Options_Under_Profile {
 
     public US06_Options_Under_Profile(){
@@ -13,23 +15,8 @@ public class US06_Options_Under_Profile {
 
     @FindBy(xpath = "//span[@id='user-name']")
     public WebElement profile;
-
-    @FindBy(xpath = "//span[text()='My Profile']")
-    public WebElement myProfile;
-
-    @FindBy(xpath = "//span[text()='Edit Profile Settings']")
-    public WebElement editProfile;
-
-    @FindBy(xpath = "//span[text()='Themes']")
-    public WebElement themes;
-
-    @FindBy(xpath = "//span[text()='Configure notifications']")
-    public WebElement configureNotifications;
-
-    @FindBy(xpath = "//span[text()='Log out']")
-    public WebElement logout;
-
-
+    @FindBy(xpath = "//div[@class='menu-popup-items']//span[contains(@class, 'text')]")
+    public List<WebElement> profileMenu;
 
 
 }
