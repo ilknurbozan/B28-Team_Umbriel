@@ -33,7 +33,7 @@ public class US04_Desktop_App_Options_Visibility_StepDefs {
         assertEquals(expectedOptions, actualOptions);
     }
 
-    private List<String> getDesktopOptions() {
+    public List<String> getDesktopOptions() {
         // Logic to get the desktop options from the page
         return List.of("MAC OS", "WINDOWS", "LINUX");
     }
