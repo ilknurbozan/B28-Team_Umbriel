@@ -8,7 +8,7 @@ Feature:   As a user, I should be able to access the Chat and Calls module.
     Given users are on the homepage
     When users click the CHAT and Calls module
     Then the user see the below options:
-      | Message         |
-      | Activity Stream |
-      | Settings        |
+      | Message(s)      |
       | Notifications   |
+      | Settings        |
+      | Activity Stream |
